@@ -1,7 +1,7 @@
 /*
   Creator: Maelig GOHIN For ARCA-Computing - www.arca-computing.fr
   Date: July 2014
-  Version: 1.1.5
+  Version: 1.1.6
 
   Description:  MultipleDatePicker is an Angular directive to show a simple calendar allowing user to select multiple dates.
           A callback is called everytime a de/selection is done.
@@ -64,7 +64,11 @@ angular.module('multipleDatePicker', [])
        * Type: boolean
        * if true can't go in futur months after today's month
        * */
-      disallowGoFuturMonths: '='
+      disallowGoFuturMonths: '=',
+      /*
+       * Type: array of Moment objects or empty array
+       * */
+      convertedDaysSelected: '=?ngModel'
     },
     template: '<div class="multiple-date-picker">'+
             '<div class="picker-top-row">'+
