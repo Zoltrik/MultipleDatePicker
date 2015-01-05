@@ -174,8 +174,8 @@ angular.module('multipleDatePicker', [])
           if(momentDate.selected) {
             scope.convertedDaysSelected.push(momentDate);
           } else {
-            scope.convertedDaysSelected.filter(function(date) {
-              return date.valueOf() === momentDate.valueOf();
+            scope.convertedDaysSelected = scope.convertedDaysSelected.filter(function(date) {
+              return date.valueOf() !== momentDate.valueOf();
             });
           }
 
